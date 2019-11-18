@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    @IBOutlet private weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let colors = [UIColor.colorWithHex(color24: 0xFF8960), UIColor.colorWithHex(color24: 0xFF62A5)]
+        button.setGradientBackgroundColors(colors, direction: .toRight, for: .normal)
+        button.layer.cornerRadius = 40
+        button.layer.masksToBounds = true
     }
 
 

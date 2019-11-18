@@ -14,6 +14,9 @@
 		049E85832382CDD300497E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E85812382CDD300497E64 /* LaunchScreen.storyboard */; };
 		049E858E2382CDD300497E64 /* UISamplesProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E858D2382CDD300497E64 /* UISamplesProjectTests.swift */; };
 		049E85992382CDD300497E64 /* UISamplesProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E85982382CDD300497E64 /* UISamplesProjectUITests.swift */; };
+		04C0931E238319CE0037B942 /* UIImage+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0931D238319CE0037B942 /* UIImage+Gradient.swift */; };
+		04C09320238319DD0037B942 /* UIButton+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0931F238319DD0037B942 /* UIButton+Gradient.swift */; };
+		04C0932223831C210037B942 /* UIColor+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0932123831C210037B942 /* UIColor+Common.swift */; };
 		689EDE3F284036799AEEC34E /* Pods_UISamplesProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AC117ECB928E99BCCE8594 /* Pods_UISamplesProjectTests.framework */; };
 		DA7A280F62C54B7331C6A1DA /* Pods_UISamplesProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3351C6E061A2BA5B0658A7 /* Pods_UISamplesProject.framework */; };
 		FE33FE28C88C54B1D9E31D95 /* Pods_UISamplesProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967E0A89D8DBB09FEC31C882 /* Pods_UISamplesProjectUITests.framework */; };
@@ -50,6 +53,9 @@
 		049E85942382CDD300497E64 /* UISamplesProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UISamplesProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		049E85982382CDD300497E64 /* UISamplesProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISamplesProjectUITests.swift; sourceTree = "<group>"; };
 		049E859A2382CDD300497E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C0931D238319CE0037B942 /* UIImage+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gradient.swift"; sourceTree = "<group>"; };
+		04C0931F238319DD0037B942 /* UIButton+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Gradient.swift"; sourceTree = "<group>"; };
+		04C0932123831C210037B942 /* UIColor+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Common.swift"; sourceTree = "<group>"; };
 		06F6CC5FABA79167F1E1A4EC /* Pods-UISamplesProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISamplesProjectTests.release.xcconfig"; path = "Target Support Files/Pods-UISamplesProjectTests/Pods-UISamplesProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		499A6C0379E257D4D1962F1D /* Pods-UISamplesProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISamplesProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-UISamplesProjectTests/Pods-UISamplesProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4FEC135657DB8ABF880D50D5 /* Pods-UISamplesProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISamplesProject.debug.xcconfig"; path = "Target Support Files/Pods-UISamplesProject/Pods-UISamplesProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 		049E85772382CDD000497E64 /* UISamplesProject */ = {
 			isa = PBXGroup;
 			children = (
+				04C0931C238318DD0037B942 /* Extension */,
 				049E85782382CDD000497E64 /* AppDelegate.swift */,
 				049E857A2382CDD000497E64 /* ViewController.swift */,
 				049E857C2382CDD000497E64 /* Main.storyboard */,
@@ -142,6 +149,16 @@
 			path = UISamplesProjectUITests;
 			sourceTree = "<group>";
 		};
+		04C0931C238318DD0037B942 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04C0931D238319CE0037B942 /* UIImage+Gradient.swift */,
+				04C0931F238319DD0037B942 /* UIButton+Gradient.swift */,
+				04C0932123831C210037B942 /* UIColor+Common.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		232C5846B673FEC71B12FF8C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +169,6 @@
 				DA8A2ADAB056B9EC0CE35A4D /* Pods-UISamplesProjectUITests.debug.xcconfig */,
 				6C484A0CA18BBF38613F5448 /* Pods-UISamplesProjectUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -407,7 +423,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				049E857B2382CDD000497E64 /* ViewController.swift in Sources */,
+				04C09320238319DD0037B942 /* UIButton+Gradient.swift in Sources */,
+				04C0931E238319CE0037B942 /* UIImage+Gradient.swift in Sources */,
 				049E85792382CDD000497E64 /* AppDelegate.swift in Sources */,
+				04C0932223831C210037B942 /* UIColor+Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
